@@ -1,0 +1,256 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f4f4f4;
+    color: black;
+}
+.pagina-categoria{
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "cabecera cabecera "
+    "main aside"
+    "pie pie";
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+.cabecera{
+    grid-area: cabecera;
+    background-color: rgba(3, 3, 3, 0.818);
+    color: #f4f4f4;
+    padding: 30px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+.zona-principal{
+    grid-area:main;
+    padding: 30px;
+    border: 1px solid #eee;
+}
+.menu-lateral{
+    grid-area: aside;
+    padding: 30px;
+    background-color: rgb(208, 208, 208);
+}
+.pie-pagina{
+    grid-area:pie;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.pie-pagina p {
+    margin:0;
+}
+.logo{
+    font-size:2.5rem;
+    font-weight: bold;
+}
+.buscador {
+    display: flex;
+}
+.buscador input{
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    font-size: 0.9rem;
+}
+.buscador button {
+  padding: 8px 15px;
+  border: none;
+  background-color: #f28c28; /* Color naranja/coral */
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0; /* Redondeado solo a la derecha */
+  transition: background-color 0.2s ease;
+}
+.buscador button:hover {
+  background-color: #d97914; /* Naranja más oscuro */
+}
+.productos-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+
+}
+.producto-card{
+border: 1px solid #eee;
+
+box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  
+  /*
+   * overflow: hidden;
+   * Se asegura de que la imagen (que redondearemos)
+   * no se salga de las esquinas redondeadas.
+   */
+  overflow: hidden;
+}
+
+/*
+ * Estilo de la imagen del producto
+ */
+.producto-card img {
+  /*
+   * width: 100%;
+   * Hace que la imagen ocupe todo el ancho de la tarjeta.
+   */
+  width: 100%;
+  
+  /*
+   * height: 180px;
+   * Le damos una altura fija a todas las imágenes.
+   */
+  height: 180px;
+  
+  /*
+   * object-fit: cover;
+   * ¡Importante! Evita que la imagen se deforme.
+   * La imagen "cubrirá" el espacio (100% x 180px),
+   * recortándose si es necesario.
+   */
+  object-fit: cover;
+  
+  /*
+   * display: block;
+   * Quita espacios fantasma debajo de la imagen.
+   */
+  display: block;
+}
+
+/*
+ * Título del producto (h3)
+ */
+.producto-card h3 {
+  font-size: 1.1rem;
+  margin: 15px 20px 5px 20px; /* Espacio (arriba, lados, abajo) */
+}
+
+/*
+ * Precio del producto
+ */
+.precio {
+  font-size: 1.2rem;
+  font-weight: 600; /* Negrita */
+  color: #333;
+  margin: 0 20px 15px 20px;
+}
+
+/*
+ * Botón "Añadir al carrito"
+ */
+.boton-anadir {
+  /*
+   * display: block;
+   * Hace que ocupe todo el ancho.
+   */
+  display: block;
+  width: 100%; /* Ocupa el 100% del ancho */
+  
+  /*
+   * padding: 12px;
+   * Espacio interno.
+   */
+  padding: 12px;
+  
+  /*
+   * background-color: #f28c28;
+   * El mismo naranja del botón de búsqueda.
+   */
+  background-color: #f28c28;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+  
+  /*
+   * border: none;
+   * Quitamos bordes del botón.
+   */
+  border: none;
+  
+  /*
+   * cursor: pointer;
+   * Manito al pasar por encima.
+   */
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.boton-anadir:hover {
+  background-color: #d97914; /* Naranja más oscuro */
+}
+/* ... (aquí va el CSS anterior) ... */
+
+
+/* --- 5. Estilos del Menú Lateral (Categorías) --- */
+
+/*
+ * Título "Categorías"
+ */
+.menu-lateral h2 {
+  font-size: 1.4rem;
+  color: #333;
+  
+  /*
+   * margin: 0 0 20px 0;
+   * Sin margen arriba, 20px de espacio por debajo.
+   */
+  margin: 0 0 20px 0;
+  
+  /*
+   * border-bottom: 2px solid #f4f4f4;
+   * Una línea sutil debajo del título.
+   */
+  border-bottom: 2px solid #f4f4f4;
+  padding-bottom: 10px;
+}
+
+/*
+ * Lista <ul> de categorías
+ */
+.menu-lateral ul {
+  list-style: none; /* Quita las viñetas */
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Enlaces <a> de cada categoría
+ */
+.menu-lateral a {
+  text-decoration: none; /* Quita el subrayado */
+  color: #000000; /* Un color azul para los enlaces */
+  font-weight: 500;
+  
+  /*
+   * display: block;
+   * Hace que el enlace ocupe todo el ancho
+   * (toda el área es clicable).
+   */
+  display: block;
+  
+  /*
+   * padding: 10px 15px;
+   * Espacio interno para que parezca un "botón".
+   */
+  padding: 10px 15px;
+  
+  /*
+   * border-radius: 5px;
+   * Esquinas redondeadas.
+   */
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+/*
+ * Efecto :hover (al pasar el ratón) para enlaces
+ */
+.menu-lateral a:hover {
+  background-color: #f8f9fa; /* Fondo gris muy claro */
+}
